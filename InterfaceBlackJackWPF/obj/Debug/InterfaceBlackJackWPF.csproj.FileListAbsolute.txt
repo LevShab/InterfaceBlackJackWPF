@@ -1,0 +1,13 @@
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\bin\Debug\InterfaceBlackJackWPF.exe.config
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.csprojResolveAssemblyReference.cache
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\MainWindow.baml
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\App.g.cs
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF_MarkupCompile.cache
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.g.resources
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.Properties.Resources.resources
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.csproj.GenerateResource.Cache
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\bin\Debug\InterfaceBlackJackWPF.exe
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\bin\Debug\InterfaceBlackJackWPF.pdb
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.exe
+C:\Users\Лева\Documents\Visual Studio 2013\Projects\InterfaceBlackJackWPF\InterfaceBlackJackWPF\obj\Debug\InterfaceBlackJackWPF.pdb
