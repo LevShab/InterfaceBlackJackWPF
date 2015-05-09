@@ -1,15 +1,15 @@
 ﻿<Window x:Class="InterfaceBlackJackWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="544.737" ResizeMode="NoResize">
-    <Grid>
+        Title="MainWindow" Height="471" Width="582.737" ResizeMode="CanResize">
+    <Grid Margin="0">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF701212" Offset="0"/>
                 <GradientStop Color="#FF150101" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="Hit" Content="Hit" HorizontalAlignment="Left" Height="19" Margin="451,10,0,0" VerticalAlignment="Top" Width="56" Cursor="Arrow" Click="Hit_Click">
+        <Button x:Name="Hit" Content="Hit" HorizontalAlignment="Left" Height="24" Margin="451,10,0,0" VerticalAlignment="Top" Width="58" Cursor="Arrow" Click="Hit_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FF219937" Offset="0"/>
@@ -17,7 +17,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="Start" Content="Жмякни, если хочешь играть!!!!" Margin="72,97" Click="Start_Click">
+        <Button x:Name="Start" Content="Жмякни, если хочешь играть!!!!" Margin="74,127,66,160" Click="Start_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF0C4D18" Offset="1"/>
@@ -25,7 +25,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="Split" Content="Split" HorizontalAlignment="Left" Height="19" Margin="451,46,0,0" VerticalAlignment="Top" Width="56" Cursor="Arrow" Click="Split_Click">
+        <Button x:Name="Split" Content="Split" HorizontalAlignment="Left" Height="23" Margin="451,46,0,0" VerticalAlignment="Top" Width="56" Cursor="Arrow" Click="Split_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FF29953D" Offset="0"/>
@@ -33,10 +33,36 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image x:Name="Image" HorizontalAlignment="Left" Height="81" Margin="54,46,0,0" VerticalAlignment="Top" Width="66"/>
+        <Image x:Name="Image" HorizontalAlignment="Left" Height="81" Margin="54,46,0,0" VerticalAlignment="Top" Width="56" Source="Resources/card0_0.png"/>
         <Label x:Name="YourScore" Content="" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="240" Foreground="#FF17A62B"/>
         <Label x:Name="EnemyScore" Content="" HorizontalAlignment="Left" Height="24" Margin="10,249,0,0" VerticalAlignment="Top" Width="240" Foreground="#FF24AC24"/>
         <Label x:Name="Win" Content="" HorizontalAlignment="Left" Height="45" Margin="341,249,0,0" VerticalAlignment="Top" Width="188" Foreground="#FF917F0F" FontSize="18"/>
+        <Image x:Name="Image1" HorizontalAlignment="Left" Height="121" Margin="54,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image HorizontalAlignment="Left" Height="77" Margin="142,97,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.45"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.974"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ImageEnemy1" HorizontalAlignment="Left" Height="121" Margin="54,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy2" HorizontalAlignment="Left" Height="121" Margin="96,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy3" HorizontalAlignment="Left" Height="121" Margin="142,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy4" HorizontalAlignment="Left" Height="121" Margin="174,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy5" HorizontalAlignment="Left" Height="121" Margin="221,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy6" HorizontalAlignment="Left" Height="121" Margin="263,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy7" HorizontalAlignment="Left" Height="121" Margin="309,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="ImageEnemy8" HorizontalAlignment="Left" Height="121" Margin="341,291,0,0" VerticalAlignment="Top" Width="86"/>
+        <Image x:Name="Image2" HorizontalAlignment="Left" Height="121" Margin="96,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image3" HorizontalAlignment="Left" Height="121" Margin="142,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image4" HorizontalAlignment="Left" Height="121" Margin="174,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image5" HorizontalAlignment="Left" Height="121" Margin="221,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image6" HorizontalAlignment="Left" Height="121" Margin="263,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image7" HorizontalAlignment="Left" Height="121" Margin="309,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
+        <Image x:Name="Image8" HorizontalAlignment="Left" Height="121" Margin="341,46,0,0" VerticalAlignment="Top" Width="86" Source="Resources/card0_0.png"/>
 
     </Grid>
 </Window>

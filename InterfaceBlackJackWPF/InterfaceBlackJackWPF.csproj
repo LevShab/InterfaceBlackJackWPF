@@ -93,6 +93,62 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\card0_0.png" />
+    <Resource Include="Image\card0_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\card0_2.png" />
+    <Resource Include="Image\card0_3.png" />
+    <Resource Include="Image\card10_0.png" />
+    <Resource Include="Image\card10_1.png" />
+    <Resource Include="Image\card10_2.png" />
+    <Resource Include="Image\card10_3.png" />
+    <Resource Include="Image\card11_0.png" />
+    <Resource Include="Image\card11_1.png" />
+    <Resource Include="Image\card11_2.png" />
+    <Resource Include="Image\card11_3.png" />
+    <Resource Include="Image\card12_0.png" />
+    <Resource Include="Image\card12_1.png" />
+    <Resource Include="Image\card12_2.png" />
+    <Resource Include="Image\card12_3.png" />
+    <Resource Include="Image\card1_0.png" />
+    <Resource Include="Image\card1_1.png" />
+    <Resource Include="Image\card1_2.png" />
+    <Resource Include="Image\card1_3.png" />
+    <Resource Include="Image\card2_0.png" />
+    <Resource Include="Image\card2_1.png" />
+    <Resource Include="Image\card2_2.png" />
+    <Resource Include="Image\card2_3.png" />
+    <Resource Include="Image\card3_0.png" />
+    <Resource Include="Image\card3_1.png" />
+    <Resource Include="Image\card3_2.png" />
+    <Resource Include="Image\card3_3.png" />
+    <Resource Include="Image\card4_0.png" />
+    <Resource Include="Image\card4_1.png" />
+    <Resource Include="Image\card4_2.png" />
+    <Resource Include="Image\card4_3.png" />
+    <Resource Include="Image\card5_0.png" />
+    <Resource Include="Image\card5_1.png" />
+    <Resource Include="Image\card5_2.png" />
+    <Resource Include="Image\card5_3.png" />
+    <Resource Include="Image\card6_0.png" />
+    <Resource Include="Image\card6_1.png" />
+    <Resource Include="Image\card6_2.png" />
+    <Resource Include="Image\card6_3.png" />
+    <Resource Include="Image\card7_0.png" />
+    <Resource Include="Image\card7_1.png" />
+    <Resource Include="Image\card7_2.png" />
+    <Resource Include="Image\card7_3.png" />
+    <Resource Include="Image\card8_0.png" />
+    <Resource Include="Image\card8_1.png" />
+    <Resource Include="Image\card8_2.png" />
+    <Resource Include="Image\card8_3.png" />
+    <Resource Include="Image\card9_0.png" />
+    <Resource Include="Image\card9_1.png" />
+    <Resource Include="Image\card9_2.png" />
+    <Resource Include="Image\card9_3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
