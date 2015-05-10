@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
 
 namespace InterfaceBlackJackWPF
 {
@@ -39,6 +40,14 @@ namespace InterfaceBlackJackWPF
         static int timescorenemy;
         static int numbertime;
         static int number2time;
+        static bool end = false;
+
+        static async void IsEnd(bool end) {
+            if (end){
+                await Task.Delay(7000);
+                Application.Current.Shutdown();
+            }
+        }
 
         private void Hit_Click(object sender, RoutedEventArgs e)
         {
@@ -49,23 +58,24 @@ namespace InterfaceBlackJackWPF
             number2 = random.Next(0, 3);
             switch (numbercard)
             {
-                case 1: Image1.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 1: Image1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 2: Image2.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 2: Image2.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 3: Image3.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 3: Image3.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 4: Image4.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 4: Image4.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 5: Image5.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 5: Image5.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 6: Image6.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 6: Image6.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 7: Image7.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 7: Image7.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 8: Image8.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 8: Image8.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                default: MessageBox.Show("Количество карт вышло за пределы. Изправится в следущей версии");
+                default: MessageBox.Show("Количество карт вышло за пределы. Иправится в следущей версии");
+                    Application.Current.Shutdown();
                     break;
             }
             numbercard++;
@@ -82,7 +92,9 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
-                ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card" + numbertime + "_" + number2time + ".png"));
+                ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
+                end = true;
+                IsEnd(end);
             }
             else if ((score == 21) && (score > scorenemy))
             {
@@ -94,7 +106,9 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
-                ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card" + numbertime + "_" + number2time + ".png"));
+                ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
+                end = true;
+                IsEnd(end);
             }
             else if ((score == 21) && (score < scorenemy))
             {
@@ -106,7 +120,9 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
-                ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card" + numbertime + "_" + number2time + ".png"));
+                ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
+                end = true;
+                IsEnd(end);
             }
             else if ((score == 21) && (score == scorenemy))
             {
@@ -118,7 +134,9 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
-                ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card" + numbertime + "_" + number2time + ".png"));
+                ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
+                end = true;
+                IsEnd(end);
             }
 
             else if ((score == scorenemy) && (score > 21))
@@ -131,7 +149,9 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
-                ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card" + numbertime + "_" + number2time + ".png"));
+                ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
+                end = true;
+                IsEnd(end);
             }
             else { }
         }
@@ -145,37 +165,40 @@ namespace InterfaceBlackJackWPF
             int number2;
             int numcard = 0;
             scorenemy += timescorenemy;
-            if (scorenemy > 15) numcard = 1;
+            if ((scorenemy > 15)&&(scorenemy<19)) numcard = 1;
             else if (scorenemy < 15) numcard = 2;
-            else if (scorenemy < 20) numcard = 0;
-            ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card"+numbertime+"_"+number2time+".png"));
+            else if (scorenemy > 19) numcard = 0;
+            ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + numbertime + "_" + number2time + ".png"));
             while (numcard != 0)
             {
                 number = random.Next(0,12);
                 number2 = random.Next(0, 3);
                 switch (numbercardenemy)
                 {
-                    case 2: ImageEnemy2.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 2: ImageEnemy2.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 3: ImageEnemy3.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 3: ImageEnemy3.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 4: ImageEnemy4.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 4: ImageEnemy4.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 5: ImageEnemy5.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 5: ImageEnemy5.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 6: ImageEnemy6.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 6: ImageEnemy6.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 7: ImageEnemy7.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 7: ImageEnemy7.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 8: ImageEnemy8.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 8: ImageEnemy8.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    default: MessageBox.Show("Количество карт вышло за пределы. Изправится в следущей версии");
+                    default: MessageBox.Show("Количество карт вышло за пределы. Иcправится в следущей версии");
+                        Application.Current.Shutdown();
                         break;
                 }
                 numbercardenemy++;
                 if (number == 12 && scorenemy > 10) scorenemy++;
                 else scorenemy = scorenemy + scorecard[number];
-                numcard--;
+                if ((scorenemy > 15) && (scorenemy < 19)) numcard = 1;
+                else if (scorenemy < 15) numcard = 2;
+                else if (scorenemy > 19) numcard = 0;
             }
             Hit.IsEnabled = false;
             Split.IsEnabled = false;
@@ -184,17 +207,17 @@ namespace InterfaceBlackJackWPF
             Win.Visibility = System.Windows.Visibility.Visible;
             YourScore.Content = String.Format("Ваш счет: {0}", score);
             EnemyScore.Content = String.Format("Счет противника: {0}", scorenemy);
-            if (score > 21) Win.Content = ("You Lose!!!");
-            else if ((score == 21) && (score > scorenemy)) Win.Content = ("You Win!!!");
-            else if ((score == 21) && (score < scorenemy)) Win.Content = ("You Win!!!");
-            else if ((score == 21) && (score == scorenemy)) Win.Content = ("You Lose!!!");
-            else if ((score == scorenemy) && (score > 21)) Win.Content = ("You Lose!!!");
-            else if ((score == scorenemy) && (score < 21)) Win.Content = ("You Lose!!!");
-            else if (((score < scorenemy) && (score < 21)) && (scorenemy < 21)) Win.Content = ("You Lose!!!");
-            else if (((score < scorenemy) && (score < 21)) && (scorenemy == 21)) Win.Content = ("You Lose!!!");
-            else if (((score < scorenemy) && (score < 21)) && (scorenemy > 21)) Win.Content = ("You Win!!!");
-            else if (((score > scorenemy) && (score<21)) && (scorenemy<21)) Win.Content = ("You Win!!!");
-            else Win.Content = ("You Lose!!!");
+            if (score > 21) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if ((score == 21) && (score > scorenemy)) { Win.Content = ("You Win!!!"); end = true; IsEnd(end); }
+            else if ((score == 21) && (score < scorenemy)) { Win.Content = ("You Win!!!"); end = true; IsEnd(end); }
+            else if ((score == 21) && (score == scorenemy)) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if ((score == scorenemy) && (score > 21)) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if ((score == scorenemy) && (score < 21)) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if (((score < scorenemy) && (score < 21)) && (scorenemy < 21)) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if (((score < scorenemy) && (score < 21)) && (scorenemy == 21)) { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
+            else if (((score < scorenemy) && (score < 21)) && (scorenemy > 21)) { Win.Content = ("You Win!!!"); end = true; IsEnd(end); }
+            else if (((score > scorenemy) && (score < 21)) && (scorenemy < 21)) { Win.Content = ("You Win!!!"); end = true; IsEnd(end); }
+            else { Win.Content = ("You Lose!!!"); end = true; IsEnd(end); }
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
@@ -207,24 +230,25 @@ namespace InterfaceBlackJackWPF
             {
                 number = random.Next(0, 13);
                 number2 = random.Next(0, 3);
-                switch (numbercard) { 
-                    case 1: Image1.Source = new BitmapImage(new Uri("C://Resources//card"+number+"_"+number2+".png"));
+                switch (numbercard) {
+                    case 1: Image1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 2: Image2.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 2: Image2.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 3: Image3.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 3: Image3.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 4: Image4.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 4: Image4.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 5: Image5.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 5: Image5.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 6: Image6.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 6: Image6.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 7: Image7.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 7: Image7.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    case 8: Image8.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                    case 8: Image8.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                         break;
-                    default: MessageBox.Show("Количество карт вышло за пределы. Изправится в следущей версии");
+                    default: MessageBox.Show("Количество карт вышло за пределы. Иcправится в следущей версии");
+                        Application.Current.Shutdown();
                         break;
                 }
                 numbercard++;
@@ -235,28 +259,29 @@ namespace InterfaceBlackJackWPF
             //generation enemy
             numbertime = random.Next(0, 13);
             number2time = random.Next(0,3);
-            ImageEnemy1.Source = new BitmapImage(new Uri("C://Resources//card.jpg"));
+            ImageEnemy1.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card.png"));
             timescorenemy+=scorecard[numbertime];
             //generation open card enemy
             number = random.Next(0, 13);
             number2 = random.Next(0, 3);
             switch (numbercardenemy)
             {
-                case 2: ImageEnemy2.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 2: ImageEnemy2.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 3: ImageEnemy3.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 3: ImageEnemy3.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 4: ImageEnemy4.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 4: ImageEnemy4.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 5: ImageEnemy5.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 5: ImageEnemy5.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 6: ImageEnemy6.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 6: ImageEnemy6.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 7: ImageEnemy7.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 7: ImageEnemy7.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                case 8: ImageEnemy8.Source = new BitmapImage(new Uri("C://Resources//card" + number + "_" + number2 + ".png"));
+                case 8: ImageEnemy8.Source = new BitmapImage(new Uri("pack://application:,,,/Image/card" + number + "_" + number2 + ".png"));
                     break;
-                default: MessageBox.Show("Количество карт вышло за пределы. Изправится в следущей версии");
+                default: MessageBox.Show("Количество карт вышло за пределы. Иcправится в следущей версии");
+                    Application.Current.Shutdown();
                     break;
             }
             numbercardenemy++;
@@ -282,6 +307,8 @@ namespace InterfaceBlackJackWPF
                 Hit.Visibility = System.Windows.Visibility.Hidden;
                 Split.Visibility = System.Windows.Visibility.Hidden;
                 Win.Visibility = System.Windows.Visibility.Visible;
+                end = true; 
+                IsEnd(end);
             }
 
         }

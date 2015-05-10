@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceBlackJackWPF", "In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7498943B-AD22-4F31-8E77-96950733BFDB}"
 	ProjectSection(SolutionItems) = preProject
+		InterfaceBlackJackWPF\Image\card.jpg = InterfaceBlackJackWPF\Image\card.jpg
 		..\InterfaceBlackJack\InterfaceBlackJack\card\card0_0.png = ..\InterfaceBlackJack\InterfaceBlackJack\card\card0_0.png
 		..\InterfaceBlackJack\InterfaceBlackJack\card\card0_1.png = ..\InterfaceBlackJack\InterfaceBlackJack\card\card0_1.png
 		..\InterfaceBlackJack\InterfaceBlackJack\card\card0_2.png = ..\InterfaceBlackJack\InterfaceBlackJack\card\card0_2.png
